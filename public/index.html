@@ -3,8 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#005dab">
+    <meta name="theme-color" content="#005DAB">
+    <meta name="theme-color" content="#005DAB" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#005DAB" media="(prefers-color-scheme: dark)">
     <title>Costco</title>
+    <link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLG2EsTNhJLRyS9oHNUImW1rqLsP2BOVS0pi9OSQ-bVg&s">
 
     <!-- update the version number as needed -->
     <script defer src="/__/firebase/10.5.0/firebase-app-compat.js"></script>
@@ -74,7 +77,8 @@
       </div>
     </footer>
     <script>
-      console.log("hello fam")
+      console.log("hello fam");
+      window.scrollTo(0, 1);
     </script>
   </body>
 </html>
