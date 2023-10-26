@@ -10,6 +10,27 @@ body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvet
     body, #message { margin-top: 0; background: white; box-shadow: none; }
 }
 
+@keyframes spinner {
+  to {transform: rotate(360deg);}
+}
+ 
+.spinner:before {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  margin-top: -15px;
+  margin-left: -15px;
+  border-radius: 50%;
+  border: 3px solid #ccc;
+  border-color: #03dac6 #03dac6 #fff;
+  /* border-top-color: #000; */
+  animation: spinner .7s linear infinite;
+}
+
 header {
   background-color: #005dab;
   position: sticky;
@@ -17,11 +38,16 @@ header {
   z-index: 999;
 }
 .header-top {
-  padding: 25px 12px 20px 12px;
+  padding: 25px 14px 20px 14px;
 }
 
 .header-bottom {
-  box-shadow: 0px 1px 3px 0px #666666;
+  box-shadow: 0px 1px 5px 0px #aaaaaa;
+}
+
+.store {
+  background-color: #fafafa;
+  box-shadow: 0px 1px 3px 0px #bebebe;
 }
 
 .grid-container {
