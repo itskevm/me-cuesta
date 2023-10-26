@@ -48,6 +48,7 @@ header {
 .store {
   background-color: #fafafa;
   box-shadow: 0px 1px 3px 0px #bebebe;
+  height: 18px;
 }
 
 .grid-container {
@@ -138,15 +139,15 @@ header {
 }
 
 footer {
-  position: fixed;
   bottom: 0;
-  width: 100%;
+  background-color: #fff;
+  position: fixed;
   padding: 6px 0px;
+  width: 100%;
 }
 
 .flex-footer {
   display: flex;
-  background-color: #fff;
   justify-content: space-evenly;
 }
 
