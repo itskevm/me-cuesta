@@ -23,51 +23,63 @@
       to avoid connecting the SDK to running emulators.
     -->
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="acct.css">
   </head>
   <body>
     <header>
       <div class="header-top">
-        <div class="grid-container">
-          <div class="grid-item-1">Explore</div>
-          <div class="grid-item-2">
-            <p>Savings</p>
-            <img src="assets/savings.png" />
-          </div>
-          <div class="grid-item-3">
-            <img src="assets/mail.png" />
-          </div>
-          <div class="grid-item-4">
-            <p>Search Costco</p>
-            <img class="mic" src="assets/mic.png" />
-          </div>
-        </div>
-      </div>
-      <div class="header-bottom">
-        <div class="flex-container">
-          <div>Same Day</div>
-          <div>Costco Next</div>
-          <div>Treasure Hunt</div>
-        </div>
+        <p>Account</p>
       </div>
     </header>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+    <div class="main-content">
+      <div class="acct-box">
+        <div class="grid-container">
+          <div class="grid-item-1">
+            <p class="label">John Smith</p>
+            <p class="subtitle">UserNumber#1</p>
+          </div>
+          <div></div>
+          <div class="grid-item-2">
+            <img src="assets/goldstar.png" />
+            <p class="label">Gold Star Member</p>
+            <img class="star-spacer" src="assets/goldstar.png" />
+          </div>
+          <div class="grid-item-3">
+            <img src="assets/faceplate.png" />
+          </div>
+          <div></div>
+          <div class="grid-item-4">
+            <img src="assets/faceplate.png" />
+          </div>
+          <div class="grid-item-5">
+            <p>Add Payment</p>
+          </div>
+        </div>
+      </div>
+      <p class="block-text">Your digital membership card cannot be used at Costco food courts at this time.</p>
+      <div class="non-acct-box">
+        <p class="label">Orders and Purchases</p>
+        <p class="subtitle">View Order Status & Manage Orders and Returns</p>
+      </div>
+      <div class="non-acct-box">
+        <p class="label">Inbox</p>
+        <p class="subtitle">View Messages</p>
+      </div>
+      <div class="non-acct-box">
+        <p class="label">My Wallet</p>
+        <p class="subtitle">Manage Payment Methods</p>
+      </div>
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
     <footer>
       <div class="flex-footer">
-        <a href="#">
-          <img class="footer-nav" src="assets/fexplore-red.png" />
+        <a href="index.html">
+          <img class="footer-nav" src="assets/fexplore.png" />
         </a>
         <a href="#">
           <img class="footer-nav" src="assets/fshop.png" />
         </a>
-        <a href="acct.html">
-          <img class="footer-nav" src="assets/faccount.png" />
+        <a href="#">
+          <img class="footer-nav" src="assets/faccount-red.png" />
         </a>
         <a href="#">
           <img class="footer-nav" src="assets/fwarehouse.png" />
