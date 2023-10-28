@@ -36,7 +36,7 @@
         <div class="grid-container">
           <div class="grid-item-1">
             <p class="label">John Smith</p>
-            <p class="subtitle">UserNumber#1</p>
+            <p class="subtitle">Membership#1</p>
           </div>
           <div></div>
           <div class="grid-item-2">
@@ -210,6 +210,11 @@
       </div>
     </footer>
     <script>
+      user_input = new URLSearchParams(window.location.search).get("code");
+      if (user_input && user_input.length == 12) {
+        // max length is 123456123456
+        document.querySelector(".subtitle").textContent = 'Membership #' + user_input;
+      }
       console.log("hello fam")
     </script>
   </body>

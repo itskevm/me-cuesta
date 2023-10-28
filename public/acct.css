@@ -126,6 +126,8 @@ hr {
   display: grid;
   /* gap: 5px 10px; */
   grid-template-columns: 38% 24% 38%;
+  /* potentially adjust to allow for one-line usernum */
+  /* grid-template-columns: 42% 18% 42%; */
   overflow-wrap: anywhere;
   justify-content: space-evenly;
 }
