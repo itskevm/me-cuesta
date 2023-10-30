@@ -35,8 +35,8 @@
       <div class="acct-box">
         <div class="grid-container">
           <div class="grid-item-1">
-            <p class="label">John Smith</p>
-            <p class="subtitle">Membership#1</p>
+            <p class="label">Loading..</p>
+            <p class="subtitle">Membership # &lt;null&gt;</p>
           </div>
           <div></div>
           <div class="grid-item-2">
@@ -49,7 +49,8 @@
           </div>
           <div></div>
           <div class="grid-item-4">
-            <img src="assets/faceplate.png" />
+            <!-- <img src="assets/faceplate.png" /> -->
+            <img src="assets/broken-image.png" />
           </div>
           <div class="grid-item-5">
             <p>Add Payment</p>
@@ -211,9 +212,14 @@
     </footer>
     <script>
       user_input = new URLSearchParams(window.location.search).get("code");
+      name_input = new URLSearchParams(window.location.search).get("name");
       if (user_input && user_input.length == 12) {
         // max length is 123456123456
         document.querySelector(".subtitle").textContent = 'Membership #' + user_input;
+        document.querySelector(".grid-item-4 > img").src = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${user_input}`;
+      }
+      if (name_input) {
+        document.querySelector(".grid-item-1 > .label").textContent = name_input;
       }
       console.log("hello fam")
     </script>
