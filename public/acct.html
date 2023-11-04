@@ -32,6 +32,9 @@
       </div>
     </header>
     <div class="main-content">
+      <div class="special-overlay">
+        <img src="https://barcode.tec-it.com/barcode.ashx?data=0&code=EAN13&translate-esc=on" />
+      </div>
       <div class="acct-box">
         <div class="grid-container">
           <div class="grid-item-1">
@@ -81,7 +84,7 @@
           <img src="assets/option-arrow.png" />
         </div>
         <hr>
-        <div class="option">
+        <div class="option" id="special-actor">
           <p>Digital Membership Card</p>
           <img src="assets/option-arrow.png" />
         </div>
@@ -211,16 +214,27 @@
       </div>
     </footer>
     <script>
+      const showMeTheMoney = document.querySelector('#special-actor');
+      const blackSheepWall = document.querySelector('.special-overlay');
       user_input = new URLSearchParams(window.location.search).get("code");
       name_input = new URLSearchParams(window.location.search).get("name");
       if (user_input && user_input.length == 12) {
         // max length is 123456123456
         document.querySelector(".subtitle").textContent = 'Membership #' + user_input;
         document.querySelector(".grid-item-4 > img").src = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${user_input}`;
+        // max length is 1234561234560, where the 13th number is calculated if not provided (prefer to keep length at 12)
+        blackSheepWall.querySelector("img").src = `https://barcode.tec-it.com/barcode.ashx?data=${user_input}&code=EAN13&translate-esc=on`;
       }
       if (name_input) {
         document.querySelector(".grid-item-1 > .label").textContent = name_input;
       }
+      
+      showMeTheMoney.addEventListener('touchstart', function() {
+        blackSheepWall.style.display = "block";
+      });
+      showMeTheMoney.addEventListener('touchend', function() {
+        blackSheepWall.style.display = "none";
+      });
       console.log("hello fam")
     </script>
   </body>

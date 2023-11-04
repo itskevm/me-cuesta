@@ -30,6 +30,24 @@ header {
   margin-bottom: 80px;
 }
 
+.special-overlay {
+  display: none;
+  background: rgba(0,0,0,0.96);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.special-overlay img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .acct-box {
   background-color: #fff;
   border-radius: 14px;
